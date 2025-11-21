@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>link-open</title>
+    <style>
+      body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 40px;
+      background-color: #dff5f3;
+    }
+      input, textarea {
+      width: 80%;
+      max-width: 400px;
+      margin-bottom: 10px;
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .FIRST{
+            background: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+    }
+    </style>
+  </head>
+  <body>
+
+    <div id ="FIRST" class="FIRST">
+      <button id="link">
+      <input type="text" id="text-one">
+    </div>
+    <script>
+
+      documente.getElementById("link").addEventListener("click",()=>{
+        const open_link=document.getElementById("text-one").value;
+
+        documente.getElementById("FIRST").innerHTML += `
+            <div class="FIRST-two">
+             <iframe src="${open_link}" width="500" height="400"></iframe>
+            </div>
+        
+      })
+
+
+    </script>
+  </body>
+</html>
